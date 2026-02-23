@@ -1,0 +1,100 @@
+<!--My Name is Brenden Jaffey, I'm in CSC102-->
+<!--The line below specifies this is a HMTL5 webpage-->
+<!DOCTYPE html>
+<!--This line is the html tag for the whole doc and also sets the language to english-->
+<html lang="en">
+<!--The head section is primarily for browsers and search engines-->
+<head> 
+    <!--sets it up so any character from any language is able to show up-->
+    <meta charset="UTF-8">
+    <!--meta is used to ensure the page is always fitting on the screen, such as a phone screen versus a laptop-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This sets up my Title for the page-->
+    <title>CSC102 Home Page</title>  
+
+   <link rel="stylesheet" href="main.css">
+</head>
+<!--Body contains all of our page content like the headings, subheadings and any memes or games-->
+<body>
+    <!--The header is the first thing you see in a page, this is the tage to set it up-->
+    <header>
+        <!--Sets the text for the header-->
+        <h1>Welcome to my CSC102 landing page</h1>
+    <!--</????> closes out the tag-->
+    </header>
+    <!--sets up the framing for the meme image-->
+    <div>
+        <!--tells the browse to leave space above and below-->
+        <p>
+            <!--inserts the meme into the page and sets the width or it-->
+             <img id="memeImage" src="Photographer-Meme.jpg" width="300">
+        </p>
+    </div>
+<!--h2 sets up a sub topic to h1-->
+    <h2>Play my dice game</h2>
+<!--sets up the button for the dice game, onclick sets the function for what it does-->
+    <button onclick="playDiceGame();">Play Game</button>
+    <!--sets the text for when the game isnt running-->
+    <div id="divMessage">Waiting for the game start</div>
+    <!--div id sets up a unique tag and assigns it the name divRoll1, divRoll2 and divSum-->
+    <div id="divRoll1"></div>
+    <div id="divRoll2"></div>
+    <div id="divSum"></div>
+<!--loads and extenal file, it loads it at the bottom of the page as to load the visuals before the functions-->
+    <script src="script.js"></script>
+<!--h2 yet again sets a subtopic, this time setting out 4 pillars of programming-->
+    <h2>There are 4 pillars of programming</h2>
+<!--h3 is a subtopic to h2-->
+    <h3>Variables</h3>
+<!--taking out the src tells the browser to not run this as text or html but to run it as logic, giving us the variable first and last name-->
+    <script>
+       let firstName = "Brenden";
+       var lastName = "Jaffey";
+    </script>
+<!--^let is the modern version of var, var would let you set the same value to a variable twice without complaining whee as let doesnt, it throws a error and then you find the problems easier-->
+<!--sets up another subtopic to h2-->
+    <h3>Functions</h3>
+<!--this sets up the addNumbers function, the brackets set up a container ensuring everything inside it known as part of the addNumbers function-->
+    <script>
+        function addNumbers(){
+            let number1 = 5;
+            let number2 = 8;
+
+           let sum = number1 + number2;
+           
+           console.log("The sum is:", sum);
+        }
+
+        addNumbers();
+    </script>
+    <!--using let for number1 and 2 and sum keeps them private to this function, console.log tells us the sum in our console so we know its working, and the end after } runs our function -->
+<!--the 3rd subtopic-->
+    <h3>Decision Logic (if/else)</h3>
+<!--sets it up so that if the person joining has the first name Brenden or last name Jaffey, it prints Brenden is here, 
+if their first name is Brenden2 it prints Brenden2 is here, otherwise if neither is met it prints Brenden is not here-->
+    <script>
+    
+        if (firstName == "Brenden" || lastName == "Jaffey"){
+            console.log("Brenden is here");
+        }
+        else if (firstName == "Brenden2"){
+            console.log("Brenden2 is here");
+        }
+        else{
+            console.log("Brenden is not here");
+        }
+    </script>
+   <!--our fourth subtopic to h2-->
+    <h3>Loops</h3>
+<!--let i = 0 creates a counter variable, setting the starting point, i < 5 prevents and infinite loop and stops the browser from crashing
+as soon as i reaches 5 the loop stops, i++ is the same as i = i + 1, which makes our counter go up and makes sure the loop progresses, console.log just tells us where the counter is at-->
+    <script>
+        for (let i = 0; i < 5; i++){
+            console.log("i=", i);
+        }
+
+    </script>
+<!--closes out the body section tag-->
+</body>
+<!--closes the html tag out-->
+</html>

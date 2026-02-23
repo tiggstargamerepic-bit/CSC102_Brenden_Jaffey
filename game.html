@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <style> 
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>JavaScript Function Demo</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="heading">Spin the Dabo Wheel</h1>
+        <form id="gameForm" onsubmit="playDabo(); return false">
+            <p id="stepUpText">Step up and spin the Wheel</p>
+            <button type="submit">Spin the Wheel</button>
+        </form>
+    </header>
+    <div id="wheelResult"></div>
+    <div id="playerResult"></div>
+    <div id="finalStatus"></div>
+    <div id="currentWinsDisplay">Total Wins = 0</div>
+    <div id="currentJackpotDisplay">Total Jackpots = 0</div>
+
+    <script src="code.js"></script>
+</body>
+</html>

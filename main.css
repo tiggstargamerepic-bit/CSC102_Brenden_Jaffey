@@ -1,3 +1,11 @@
+/*
+selector{
+
+property: value;
+
+}
+*/
+
 body{
      color:#1e00ff; 
     background-color: #00aa36;
@@ -23,4 +31,10 @@ footer{
 
 h1{
     text-align: center;
+}
+
+#stepUpText{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
 }

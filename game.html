@@ -1,30 +1,46 @@
+<!--My Name is Brenden Jaffey, I'm in CSC102-->
+<!--The line below specifies this is a HMTL5 webpage-->
 <!DOCTYPE html>
+<!--This line is the html tag for the whole doc and also sets the language to english-->
 <html lang="en">
+<!--The head section is primarily for browsers and search engines-->
 <head> 
+    <!--sets all font to CourierNew-->
     <style> 
         body{
             font-family: 'Courier New', Courier, monospace;
         }
     </style>
+    <!--sets it up so any character from any language is able to show up-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>JavaScript Function Demo</title>
+    <!--meta is used to ensure the page is always fitting on the screen, such as a phone screen versus a laptop-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This sets up my Title for the page-->
+    <title>JavaScript Dabo Game</title>
+    <!--makes the page refernce data stored in the main.css file, such as background color, fonts, and image sizes-->
     <link href="main.css" rel="stylesheet">
+    <!--closes out the head tag-->
 </head>
+<!--all the visual parts the user sees-->
 <body>
     <header>
-        <h1 id="heading">Spin the Dabo Wheel</h1>
+        <!--sets up the top of screen header-->
+        <h1 id="heading">🛞Spin the Dabo Wheel🛞</h1>
+        <!--sets up the button to play the game aswell as a subheader telling the play to click the button, form specifically tells the browser everything inside belongs together-->
         <form id="gameForm" onsubmit="playDabo(); return false">
+            <!--sets up the subheader and tells the page to leave space-->
             <p id="stepUpText">Step up and spin the Wheel</p>
+            <!--sets up the buton the player uses to play the game, submit makes it so the earlier used onsubmit="playDabo" runs, so everytime the button is clicked the wheels spin-->
             <button type="submit">Spin the Wheel</button>
         </form>
     </header>
+    <!--these are our unique tags used throughout our scripts, which can be later used as variables-->
     <div id="wheelResult"></div>
     <div id="playerResult"></div>
     <div id="finalStatus"></div>
     <div id="currentWinsDisplay">Total Wins = 0</div>
     <div id="currentJackpotDisplay">Total Jackpots = 0</div>
-
+<!--connect our external file code.js to this one, it loads at the bottom while the visuals load up top-->
     <script src="code.js"></script>
 </body>
 </html>

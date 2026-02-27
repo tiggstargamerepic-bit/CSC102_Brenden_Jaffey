@@ -27,6 +27,7 @@ footer{
 #memeImage{
     margin-right: 200px;
     width: 300px;
+    position: absolute;
 }
 
 h1{

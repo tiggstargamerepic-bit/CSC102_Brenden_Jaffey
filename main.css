@@ -7,7 +7,7 @@ property: value;
 */
 
 body{
-     color:#1e00ff; 
+    color:#1e00ff; 
     background-color: #00aa36;
 }
 
@@ -37,4 +37,8 @@ h1{
     text-align: center;
     width: 100%;
     margin: 10px 0;
+}
+
+#secret{
+    text-align: center;
 }

@@ -94,6 +94,40 @@ as soon as i reaches 5 the loop stops, i++ is the same as i = i + 1, which makes
         }
 
     </script>
+<!--sets up our buttons and their id's-->
+    <button type="button" id="startButton">Start Movement</button>
+    <button type="button" id="stopButton">Stop Movement</button>
+<!--our movement script-->
+    <script>
+    /*our movement variable which starts out as set to null*/
+        var moveInterval = null;
+    /*finds the start button and sets it to do the move function when clicked, then locks the button and unlocks the stop button*/
+    document.getElementById("startButton").onclick = function(Move) {
+        document.getElementById("startButton").disabled = true;
+        document.getElementById("stopButton").disabled = false;
+    /*our move function*/
+    moveInterval = setInterval(function() {
+    /*finds memeImage and then makes it a variable*/
+        var memeImage = document.getElementById("memeImage");
+    /*sets up one of our position variables*/
+        var currentLeft = parseInt(memeImage.style.left) || 0;
+    /*sets it so every tick the image moves 10px to the right*/
+        memeImage.style.left = (currentLeft + 10) + "px";
+    /*sets up the second position variable*/
+        var currentTop = parseInt(memeImage.style.top) || 0;
+    /*sets the image to go down 10px per tick*/
+        memeImage.style.top = (currentTop + 10) + "px";
+    }, 100);
+}
+/*sets up our stop movement function*/
+document.getElementById("stopButton").onclick = function(stopMove) {
+    /*enables the start button and disables the stop button*/
+        document.getElementById("stopButton").disabled = true;
+        document.getElementById("startButton").disabled = false;
+/*stops movement by clearing the variable moveInterval*/
+clearInterval(moveInterval);
+}
+    </script>
 <!--closes out the body section tag-->
 </body>
 <!--closes the html tag out-->

@@ -1,0 +1,79 @@
+<!--My Name is Brenden Jaffey, I'm in CSC102-->
+<!--The line below specifies this is a HMTL5 webpage-->
+<!DOCTYPE html>
+<!--This line is the html tag for the whole doc and also sets the language to english-->
+<html lang="en">
+<!--The head section is primarily for browsers and search engines-->
+<head> 
+    <!--sets it up so any character from any language is able to show up-->
+    <meta charset="UTF-8">
+    <!--meta is used to ensure the page is always fitting on the screen, such as a phone screen versus a laptop-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This sets up my Title for the page-->
+    <title>User Input Validation</title>  
+
+   <link rel="stylesheet" href="main.css">
+</head>
+<!--Body contains all of our page content like the headings, subheadings and any memes or games-->
+<body>
+    <!--The header is the first thing you see in a page, this is the tage to set it up-->
+    <header>
+        <!--Sets the text for the header-->
+        <h1>User Input Validation</h1>
+    <!--</????> closes out the tag-->
+    </header>
+
+    
+<!--form sets up all of our inputs and our submit button and keeps them together in the myForm id-->
+    <form id="myForm">
+<!--h2 sets up our text telling you what to fill in the input text-->
+    <h2>First Name:</h2>
+<!--input sets up out input bar, type="text" makes it a text bar, and id sets it up to be ou firstName input bar-->
+    <input type="text" id="firstName">
+<!--sets up the lastName the same way as firstName-->
+    <h2>Last Name:</h2>
+<!--sets up our lastName input text bar-->
+    <input type="text" id="lastName">
+<!-- sets up our zipcode text and the next line sets up the input tex bar-->
+    <h2>Zipcode:</h2>
+    <input type="text" id="zipCode">
+<!--sets up the submit button-->
+    <button type="submit">Submit</button>
+    </form>
+
+
+<!--this sets up for our javascript section which makes out function of taking the information and making variables which in turn we can make if statements-->
+    <script>
+/*finds our id named myForm and activates function Verify which is what stores our ids as variables based on the uses inputs*/
+        document.getElementById("myForm").onsubmit = function(Verify) {
+    Verify.preventDefault();
+
+/*all our actual variables which get stored on submit as whatever the user inputs*/
+    var firstName = document.getElementById("firstName").value  
+    var lastName = document.getElementById("lastName").value
+    var fullName = firstName +  " " + lastName
+    var zipCode = document.getElementById("zipCode").value
+    var zipPattern = /^\d{5}$/;
+/*if the inputs meet these 2 requirements the script continues but if either isnt met it ends the script*/
+    if (fullName.length > 20){
+/*if the fullName is more than 20 characters it gives the error and returns ending the script and not allowing the user to see the secret message*/
+        document.getElementById("message").textContent = "Error, too many characters, try again"
+        return
+}
+/*checks zipCode to see if it matches the number of characters our variable zipPattern sets, if its not equal to 5 it shows the error and returns not showing the secret message*/
+    if (!zipPattern.test(zipCode)){
+        document.getElementById("message").textContent = "Zipcode doesnt work, try again"
+        return
+}
+/*sets up our secret message block, which wont be visible initially but if it makes it here its set up and visible*/
+document.getElementById("secret").style.display = "block"
+}
+
+
+    </script>
+    <!--sets up our message parameter-->
+    <p id="message"></p>
+    <!-- sets up the secret message-->
+    <div id="secret" style="display:none;">congratulations🎉🎉🎉 you're real!!!!</div>
+</body>
+</html>

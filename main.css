@@ -7,8 +7,8 @@ property: value;
 */
 
 body{
-    color:#1e00ff; 
-    background-color: #00aa36;
+    color:#fcffdf; 
+    background-color: #0c000f;
 }
 
 nav{
@@ -44,4 +44,14 @@ h1{
 
 #secret{
     text-align: center;
+}
+
+button {
+    background-color: #001c42;
+    color: #fefff4;
+    border: 1px solid #e88eff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }

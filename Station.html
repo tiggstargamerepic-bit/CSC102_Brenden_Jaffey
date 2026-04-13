@@ -1,0 +1,40 @@
+<!--My Name is Brenden Jaffey, I'm in CSC102-->
+<!--The line below specifies this is a HMTL5 webpage-->
+<!DOCTYPE html>
+<!--sets english-->
+<html lang="en">
+<!--our header, it has our title, sets up the general style, and sets up so the page works on any device-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Security Portal</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<!--our body area holds all the main parts of our page-->
+<body>
+    <!--sets up the framing for the meme image and the security form-->
+    <div class="portal-card">
+        <!--our visual headr for the page-->
+        <h1>Station Security</h1>
+        <!--sets up the guard image since its a security site and i thought it would look nice-->
+        <img id="memeImage2" src="guard.png" width="250" alt="Security Image">
+        <!--our securityForm sets up the input boxes and text for the form-->
+        <form id="securityForm">
+            <!--text label for the first name input-->
+            <label for="fName">First Name:</label>
+            <!--sets up the iput type which is text in this instance-->
+            <input type="text" id="fName" placeholder="Enter First Name">
+            <!--text label for our badge number-->
+            <label for="badgeNum">Badge Number (3 Digits):</label>
+            <!--input for our badge number-->
+            <input type="text" id="badgeNum" placeholder="e.g. 123">
+            <!--our submit button-->
+            <button type="submit">Verify Identity</button>
+        </form>
+        <!--these 3 close out all the parts we made so they arent still looking for more parts to run and bug out-->
+        <div id="statusDisplay"></div>
+    </div>
+    <!--calls for the javascript I made-->
+    <script src="SecurityScript.js"></script>
+</body>
+</html>

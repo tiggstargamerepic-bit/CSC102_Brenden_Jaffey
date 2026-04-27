@@ -10,7 +10,7 @@
     <!--meta is used to ensure the page is always fitting on the screen, such as a phone screen versus a laptop-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--This sets up my Title for the page-->
-    <title>CSC102 Home Page</title>  
+    <title>Station Security Portal</title>  
 
    <link rel="stylesheet" href="main.css">
 </head>
@@ -22,6 +22,23 @@
         <h1>Welcome to my CSC102 landing page</h1>
     <!--</????> closes out the tag-->
     </header>
+    <nav>
+        <h2>
+            <a href="./index.html">Home</a><br>
+            <a href="./boards.html">Boards</a><br>
+            <a href="./TopGames.html">Table</a><br>
+            <a href="./game.html">Dabo Wheel</a><br>
+            <a href="./Station.html">Station Security</a><br>
+            <a href="./strings.html">Strings</a><br>
+        </h2>
+    </nav>
+
+    <footer>
+        Brenden Jaffey<br>
+        University of Advancing Technology<br>
+        2625 W. Baseline Rd.<br> 
+        Tempe, AZ 85283<br>
+    </footer>
     <!--sets up the framing for the meme image-->
     <div>
         <!--tells the browse to leave space above and below-->
@@ -30,16 +47,17 @@
              <img id="memeImage" src="Photographer-Meme.jpg" width="300">
         </p>
     </div>
-<!--h2 sets up a sub topic to h1-->
-    <h2>Play my dice game</h2>
-<!--sets up the button for the dice game, onclick sets the function for what it does-->
-    <button onclick="playDiceGame();">Play Game</button>
-    <!--sets the text for when the game isnt running-->
-    <div id="divMessage">Waiting for the game start</div>
-    <!--div id sets up a unique tag and assigns it the name divRoll1, divRoll2 and divSum-->
-    <div id="divRoll1"></div>
-    <div id="divRoll2"></div>
-    <div id="divSum"></div>
+
+    <form id="accessForm">
+            <label for="fName">First Name:</label>
+            <input type="text" id="fName" placeholder="Enter First Name">
+
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lName" placeholder="Enter Last Name">
+
+            <button type="submit" id="submitBtn">Request Access</button>
+    </form>
+
 <!--sets up the title for the audio-->
     <h2>Space Station Ambience</h2>
     <!--finds outr audio and sets it up to loop-->

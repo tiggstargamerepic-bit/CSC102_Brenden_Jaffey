@@ -1,10 +1,3 @@
-/*
-selector{
-
-property: value;
-
-}
-*/
 
 body{
     color:#fcffdf; 
@@ -19,16 +12,21 @@ nav{
     line-height: 30px;
 }
 
-footer{
-    text-align: center;
-    margin-right: 200px;
-}
+
 
 #memeImage{
     margin-right: 200px;
     width: 300px;
     position: absolute;
-    left: 50%;
+    left: 70%;
+    z-index: -1;
+}
+
+#memeImage2{
+    margin-right: 200px;
+    width: 300px;
+    position: absolute;
+    left: 70%;
     z-index: -1;
 }
 
@@ -54,4 +52,27 @@ button {
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.success {
+    text-align: center;
+    color: #00ff88;
+}
+
+.error {
+    text-align: center;
+    color: #ff4444;
+}
+
+#statusDisplay img {
+    margin-top: 15px;
+    margin-right: 200px;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 8px;
+    left: 42%;
 }

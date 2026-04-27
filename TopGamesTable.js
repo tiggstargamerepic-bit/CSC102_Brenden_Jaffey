@@ -45,5 +45,6 @@ function createTable() {
     container.appendChild(table);
 }
 
-//sets up so it creates the table once the window loads
-window.onload = createTable;
+document.addEventListener('DOMContentLoaded', () => {
+    createTable();
+});

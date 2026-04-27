@@ -44,5 +44,8 @@ function createTable() {
 //this pushes the table into the actual page sot he user can actually see it
     container.appendChild(table);
 }
+
+// This tells the browser to run the function
+createTable(); 
 //sets up so it creates the table once the window loads
 window.onload = createTable;

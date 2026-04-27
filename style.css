@@ -14,7 +14,13 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
-
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
 
 
 thead {
@@ -33,4 +39,51 @@ tbody tr {
 
 tbody tr:nth-of-type(even) {
     background-color: #0051ff;
+}
+
+h1{
+    text-align: center;
+}
+
+#stepUpText{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#secret{
+    text-align: center;
+}
+
+button {
+    background-color: #001c42;
+    color: #fefff4;
+    border: 1px solid #e88eff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.success {
+    text-align: center;
+    color: #00ff88;
+}
+
+.error {
+    text-align: center;
+    color: #ff4444;
+}
+
+#statusDisplay img {
+    margin-top: 15px;
+    margin-right: 200px;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 8px;
+    left: 42%;
 }

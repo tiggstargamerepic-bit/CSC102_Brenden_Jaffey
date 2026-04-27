@@ -23,17 +23,6 @@
 </head>
 <!--all the visual parts the user sees-->
 <body>
-    <header>
-        <!--sets up the top of screen header-->
-        <h1 id="heading">🛞Spin the Dabo Wheel🛞</h1>
-        <!--sets up the button to play the game aswell as a subheader telling the play to click the button, form specifically tells the browser everything inside belongs together-->
-        <form id="gameForm" onsubmit="playDabo(); return false">
-            <!--sets up the subheader and tells the page to leave space-->
-            <p id="stepUpText">Step up and spin the Wheel</p>
-            <!--sets up the buton the player uses to play the game, submit makes it so the earlier used onsubmit="playDabo" runs, so everytime the button is clicked the wheels spin-->
-            <button type="submit">Spin the Wheel</button>
-        </form>
-    </header>
     <nav>
         <h2>
             <a href="./index.html">Home</a><br>
@@ -50,6 +39,19 @@
         2625 W. Baseline Rd.<br> 
         Tempe, AZ 85283<br>
     </footer>
+    <header>
+        <!--sets up the top of screen header-->
+        <h1 id="heading">🛞Spin the Dabo Wheel🛞</h1>
+        <!--sets up the button to play the game aswell as a subheader telling the play to click the button, form specifically tells the browser everything inside belongs together-->
+        <form id="gameForm" onsubmit="playDabo(); return false">
+            <!--sets up the subheader and tells the page to leave space-->
+            <p id="stepUpText">Step up and spin the Wheel</p>
+            <!--sets up the buton the player uses to play the game, submit makes it so the earlier used onsubmit="playDabo" runs, so everytime the button is clicked the wheels spin-->
+            <button type="submit">Spin the Wheel</button>
+        </form>
+    </header>
+    
+    
     <!--these are our unique tags used throughout our scripts, which can be later used as variables-->
     <div id="wheelResult"></div>
     <div id="playerResult"></div>

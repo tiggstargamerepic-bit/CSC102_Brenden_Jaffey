@@ -14,18 +14,30 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
-#table-container {
-    clear: both; /* This forces the table to start BELOW the nav and footer area */
-    display: flex;
-    justify-content: center; /* Centers the table on the page */
-    padding-top: 20px;
-}
-nav{
-    height: 600px;
+/* Keep your nav as is, but let's ensure it has room */
+nav {
+    height: auto; /* Changed from 600px to auto so it doesn't overlap stuff below it */
+    min-height: 300px;
     width: 200px;
     float: left;
     padding: 5px;
     line-height: 30px;
+}
+
+/* This is the key: Force the table and footer to start AFTER the floated nav */
+#table-container {
+    clear: left; /* Specifically clears the left float of the nav */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+footer {
+    clear: both; /* Ensures the footer stays at the very bottom */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
 }
 
 
